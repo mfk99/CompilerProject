@@ -26,10 +26,6 @@ def tokenize(source_code: str) -> list[str]:
   while position < len(source_code):
     match = whitespace_re.match(source_code, position)
     if match is not None:
-      result.append(Token(
-        type='identifier',
-        text=source_code[position:match.end()]
-      ))
       position = match.end()
       continue
 
@@ -72,5 +68,5 @@ def tokenize(source_code: str) -> list[str]:
     raise Exception(f'Tokenization failed near {source_code[position:(position + 10)]}...')
 
   # TODO cleanup
-
+  print(result)
   return result
