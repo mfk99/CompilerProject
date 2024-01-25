@@ -21,3 +21,9 @@ class BinaryOp(Expression):
     right: Expression
 
 ... # You get to define more later
+
+example_ast = BinaryOp(
+    left=Identifier(name="x"),
+    op="+",
+    right=Literal(value=3),
+)

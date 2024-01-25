@@ -14,7 +14,7 @@ class Token:
   type: TokentType
   text: str
 
-def tokenize(source_code: str) -> list[str]:
+def tokenize(source_code: str) -> list[Token]:
   whitespace_re = re.compile(r'\s+')
   integer_re = re.compile(r'[0-9]')
   identifier_re = re.compile(r'[a-zA-Z0-9_]+')
